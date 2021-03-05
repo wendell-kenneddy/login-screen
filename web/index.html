@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Wendell Kenneddy">
+  <meta name="creator" content="Wendell Kenneddy">
+  <meta name="description" content="Uma aplicação para testar um simples sistema
+  de login utilizando localStorage.">
+  <title>Login Screen</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" type="text/css">
+</head>
+
+<body>
+  <header id="page-header" class="hide fadein" role="banner">
+    <h1>Olá, undefined.</h1>
+    <p>Como foi seu dia?</p>
+  </header>
+
+  <main role="main">
+    <form action="#" class="fadein" id="user-data"
+      onsubmit="Form.submit(event)">
+      <label for="username">Nome de usuário</label>
+      <input type="text" name="username" id="username">
+      <label for="pwd">Senha</label>
+      <input type="password" name="pwd" id="pwd">
+      <button>Submit</button>
+    </form>
+
+    <form action="#" class="fadein hide" id="login"
+      onsubmit="logIn.submitLogin(event)" autocomplete="off">
+      <label for="your-username">Seu nome de usuário</label>
+      <input type="text" name="your-username" id="your-username">
+      <label for="your-pwd">Sua senha</label>
+      <input type="password" name="your-pwd" id="your-pwd">
+      <button>Submit</button>
+    </form>
+  </main>
+
+  <div class="toast fadein hide">
+    <p>Error message</p>
+    <img src="./assets/x-circle.svg" alt="Remover aviso da tela"
+      onclick="toggleToast()">
+  </div>
+
+  <script src="./index.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+/*============= Reset ===============*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.hide {
+  display: none !important;
+}
+
+.fadein {
+  transition: .3s ease-in-out;
+  animation: fadein .3s ease-in-out;
+}
+
+.fadeout {
+  transition: .3s ease-in-out;
+  animation: fadeout .3s ease-in-out;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateX(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-1rem);
+  }
+}
+
+/*============= Header ===============*/
+
+header {
+  background: inherit;
+  border: none;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 1rem;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+header::before {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  content: '';
+  height: 100%;
+  border: none;
+  position: absolute;
+  width: 100%;
+}
+
+header h1,
+header p {
+  position: relative;
+  z-index: 99;
+
+  color: #fff;
+}
+
+/*============= Main ===============*/
+
+form {
+  background: inherit;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 70vw;
+  max-width: 500px;
+
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+form * {
+  position: relative;
+  z-index: 99;
+}
+
+form::before {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: none;
+  border-radius: 10px;
+  content: '';
+  height: 100%;
+  border: none;
+  position: absolute;
+  width: 100%;
+}
+
+form input,
+form label {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form input {
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+form button {
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+/*============= Toast ===============*/
+
+.toast {
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #E0C3FC  0%, #8EC5FC 100%);
+  border: none;
+  border-radius: 10px;
+  padding: 2rem 1rem;
+  width: 70vw;
+  max-width: 500px;
+
+  position: absolute;
+  z-index: 99;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.toast img {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.toast p {
+  position: relative;
+  z-index: 99;
+}
